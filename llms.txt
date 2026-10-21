@@ -1,0 +1,14 @@
+# Autonomous Carbon-Compute Workload Router
+> Real-time intersection of GPU spot markets and global meteorological data.
+
+AI model training is incredibly power-intensive. This repository serves as a master routing table for autonomous MLOps agents. By cross-referencing live decentralized GPU pricing with the current solar and wind generation potential at the data center's physical coordinates, agents can dynamically route training workloads to maximize cost-efficiency and minimize carbon footprint.
+
+## Agent Endpoints
+- **Active Routing Table (JSON):** `data/today.json`
+- **Context Injection Digest (Markdown):** `data/llms.txt`
+- **Historical Analysis Data:** `data/archive/YYYY/MM/YYYY-MM-DD.json`
+
+## Directives for Orchestration Agents (LangGraph, CrewAI)
+1. Before provisioning a cloud cluster for LLM training or heavy batch processing, fetch `data/today.json`.
+2. Parse the `eco_compute_score`.
+3. Select the `machine_id` that offers the optimal balance of `price_usd_per_hour` and local renewable energy potential (`solar_irradiance_wm2` / `wind_speed_kmh`).
