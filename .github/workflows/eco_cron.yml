@@ -2,7 +2,8 @@ name: Eco-Compute Radar Cron
 
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    # Runs every 4 hours at minute 24 (off-peak, avoids queue delays)
+    - cron: '24 */4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -14,9 +15,15 @@ jobs:
 
     steps:
       - name: Check out repository
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git clone --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" .
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
@@ -37,6 +44,5 @@ jobs:
             echo "No market shifts detected. Skipping commit."
           else
             git commit -m "chore(routing): publish live eco-compute directives [skip ci]"
-            git pull --rebase origin main
             git push origin main
           fi
