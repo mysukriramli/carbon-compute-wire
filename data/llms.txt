@@ -2,32 +2,32 @@
 > Real-time cross-referencing of GPU spot pricing and live meteorological data (solar/wind) to minimize training carbon footprints.
 
 ## Active Workload Routing Directives
-### RTX 4090 in FI (Eco-Score: **40.4**/100)
+### RTX 4090 in FI (Eco-Score: **23.3**/100)
 - **Spot Rate:** $0.48/hr (Node: `10103`)
-- **Grid Weather:** Wind: 19.4 km/h | Solar: 0.0 W/m²
-- **Agent Directive:** `STANDARD ROUTING: Viable RTX 4090 node in FI at $0.48/hr. Normal grid mix.`
+- **Grid Weather:** Wind: 11.2 km/h | Solar: 0.0 W/m²
+- **Agent Directive:** `RESTRICT ROUTING: Avoid FI for non-urgent tasks. High grid carbon intensity relative to spot cost.`
 
-### RTX 4090 in US (Eco-Score: **15.1**/100)
+### RTX 4090 in US (Eco-Score: **10.0**/100)
 - **Spot Rate:** $0.52/hr (Node: `10106`)
-- **Grid Weather:** Wind: 7.5 km/h | Solar: 8.0 W/m²
+- **Grid Weather:** Wind: 5.2 km/h | Solar: 0.0 W/m²
 - **Agent Directive:** `RESTRICT ROUTING: Avoid US for non-urgent tasks. High grid carbon intensity relative to spot cost.`
 
-### H100 SXM in IS (Eco-Score: **7.6**/100)
+### H100 SXM in IS (Eco-Score: **5.0**/100)
 - **Spot Rate:** $2.85/hr (Node: `10101`)
-- **Grid Weather:** Wind: 21.6 km/h | Solar: 0.0 W/m²
+- **Grid Weather:** Wind: 12.2 km/h | Solar: 0.0 W/m²
 - **Agent Directive:** `RESTRICT ROUTING: Avoid IS for non-urgent tasks. High grid carbon intensity relative to spot cost.`
 
-### A100 SXM4 in NO (Eco-Score: **5.4**/100)
+### A100 SXM4 in NO (Eco-Score: **5.0**/100)
 - **Spot Rate:** $1.45/hr (Node: `10102`)
-- **Grid Weather:** Wind: 7.9 km/h | Solar: 0.0 W/m²
+- **Grid Weather:** Wind: 4.3 km/h | Solar: 0.0 W/m²
 - **Agent Directive:** `RESTRICT ROUTING: Avoid NO for non-urgent tasks. High grid carbon intensity relative to spot cost.`
 
 ### H100 PCIe in CA (Eco-Score: **5.0**/100)
 - **Spot Rate:** $2.4/hr (Node: `10104`)
-- **Grid Weather:** Wind: 9.2 km/h | Solar: 0.0 W/m²
+- **Grid Weather:** Wind: 11.6 km/h | Solar: 0.0 W/m²
 - **Agent Directive:** `RESTRICT ROUTING: Avoid CA for non-urgent tasks. High grid carbon intensity relative to spot cost.`
 
 ### A100 PCIe in DE (Eco-Score: **5.0**/100)
 - **Spot Rate:** $1.15/hr (Node: `10105`)
-- **Grid Weather:** Wind: 4.9 km/h | Solar: 0.0 W/m²
+- **Grid Weather:** Wind: 3.6 km/h | Solar: 0.0 W/m²
 - **Agent Directive:** `RESTRICT ROUTING: Avoid DE for non-urgent tasks. High grid carbon intensity relative to spot cost.`
