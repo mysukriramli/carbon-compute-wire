@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-01T15:17:01.311506+00:00",
+    "generated_at": "2026-11-01T20:36:54.357306+00:00",
     "data_sources": [
       "Vast.ai GPU Market",
       "Open-Meteo Global Weather"
@@ -10,19 +10,6 @@
   },
   "routing_nodes": [
     {
-      "machine_id": 10103,
-      "gpu_model": "RTX 4090",
-      "num_gpus": 4,
-      "price_usd_per_hour": 0.48,
-      "location_country": "FI",
-      "latitude": 60.1699,
-      "longitude": 24.9384,
-      "wind_speed_kmh": 20.2,
-      "solar_irradiance_wm2": 0.0,
-      "eco_compute_score": 42.1,
-      "agent_directive": "STANDARD ROUTING: Viable RTX 4090 node in FI at $0.48/hr. Normal grid mix."
-    },
-    {
       "machine_id": 10106,
       "gpu_model": "RTX 4090",
       "num_gpus": 2,
@@ -30,10 +17,49 @@
       "location_country": "US",
       "latitude": 37.7749,
       "longitude": -122.4194,
-      "wind_speed_kmh": 5.6,
-      "solar_irradiance_wm2": 25.0,
-      "eco_compute_score": 12.8,
-      "agent_directive": "RESTRICT ROUTING: Avoid US for non-urgent tasks. High grid carbon intensity relative to spot cost."
+      "wind_speed_kmh": 3.6,
+      "solar_irradiance_wm2": 546.0,
+      "eco_compute_score": 50.7,
+      "agent_directive": "STANDARD ROUTING: Viable RTX 4090 node in US at $0.52/hr. Normal grid mix."
+    },
+    {
+      "machine_id": 10103,
+      "gpu_model": "RTX 4090",
+      "num_gpus": 4,
+      "price_usd_per_hour": 0.48,
+      "location_country": "FI",
+      "latitude": 60.1699,
+      "longitude": 24.9384,
+      "wind_speed_kmh": 20.5,
+      "solar_irradiance_wm2": 0.0,
+      "eco_compute_score": 42.7,
+      "agent_directive": "STANDARD ROUTING: Viable RTX 4090 node in FI at $0.48/hr. Normal grid mix."
+    },
+    {
+      "machine_id": 10102,
+      "gpu_model": "A100 SXM4",
+      "num_gpus": 8,
+      "price_usd_per_hour": 1.45,
+      "location_country": "NO",
+      "latitude": 59.9139,
+      "longitude": 10.7522,
+      "wind_speed_kmh": 15.1,
+      "solar_irradiance_wm2": 0.0,
+      "eco_compute_score": 10.4,
+      "agent_directive": "RESTRICT ROUTING: Avoid NO for non-urgent tasks. High grid carbon intensity relative to spot cost."
+    },
+    {
+      "machine_id": 10101,
+      "gpu_model": "H100 SXM",
+      "num_gpus": 8,
+      "price_usd_per_hour": 2.85,
+      "location_country": "IS",
+      "latitude": 64.1466,
+      "longitude": -21.9426,
+      "wind_speed_kmh": 19.8,
+      "solar_irradiance_wm2": 0.0,
+      "eco_compute_score": 6.9,
+      "agent_directive": "RESTRICT ROUTING: Avoid IS for non-urgent tasks. High grid carbon intensity relative to spot cost."
     },
     {
       "machine_id": 10104,
@@ -43,9 +69,9 @@
       "location_country": "CA",
       "latitude": 45.4215,
       "longitude": -75.6972,
-      "wind_speed_kmh": 6.5,
-      "solar_irradiance_wm2": 317.0,
-      "eco_compute_score": 8.2,
+      "wind_speed_kmh": 8.0,
+      "solar_irradiance_wm2": 105.0,
+      "eco_compute_score": 5.2,
       "agent_directive": "RESTRICT ROUTING: Avoid CA for non-urgent tasks. High grid carbon intensity relative to spot cost."
     },
     {
@@ -56,36 +82,10 @@
       "location_country": "DE",
       "latitude": 50.1109,
       "longitude": 8.6821,
-      "wind_speed_kmh": 7.9,
-      "solar_irradiance_wm2": 3.0,
-      "eco_compute_score": 7.0,
-      "agent_directive": "RESTRICT ROUTING: Avoid DE for non-urgent tasks. High grid carbon intensity relative to spot cost."
-    },
-    {
-      "machine_id": 10101,
-      "gpu_model": "H100 SXM",
-      "num_gpus": 8,
-      "price_usd_per_hour": 2.85,
-      "location_country": "IS",
-      "latitude": 64.1466,
-      "longitude": -21.9426,
-      "wind_speed_kmh": 19.1,
+      "wind_speed_kmh": 4.5,
       "solar_irradiance_wm2": 0.0,
-      "eco_compute_score": 6.7,
-      "agent_directive": "RESTRICT ROUTING: Avoid IS for non-urgent tasks. High grid carbon intensity relative to spot cost."
-    },
-    {
-      "machine_id": 10102,
-      "gpu_model": "A100 SXM4",
-      "num_gpus": 8,
-      "price_usd_per_hour": 1.45,
-      "location_country": "NO",
-      "latitude": 59.9139,
-      "longitude": 10.7522,
-      "wind_speed_kmh": 3.6,
-      "solar_irradiance_wm2": 1.6,
       "eco_compute_score": 5.0,
-      "agent_directive": "RESTRICT ROUTING: Avoid NO for non-urgent tasks. High grid carbon intensity relative to spot cost."
+      "agent_directive": "RESTRICT ROUTING: Avoid DE for non-urgent tasks. High grid carbon intensity relative to spot cost."
     }
   ]
 }
